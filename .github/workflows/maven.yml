@@ -48,14 +48,9 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Debug Docker Auth
-      run: |
-        docker info
-        cat ~/.docker/config.json
-
     - name: Build and Push Docker image with tags
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
-        tags: elangov16/docker-k8s:latest
+        tags: elangov16/docker-k8s:v1.0.0
