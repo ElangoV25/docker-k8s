@@ -18,5 +18,10 @@ public class DockerK8sApplication {
 	public String health() {
 		return "<h1>Hi There!! Heath check is OK</h1>";
 	}
+	
+	@GetMapping("/greeting")
+	public String greeting() {
+		return "<h1>Welcome to our Website!!! </h1>";
+	}
 
 }
